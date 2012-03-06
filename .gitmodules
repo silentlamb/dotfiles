@@ -7,3 +7,6 @@
 [submodule "vim/bundle/rainbow"]
 	path = vim/bundle/rainbow
 	url = https://github.com/kien/rainbow_parentheses.vim.git
+[submodule "vim/bundle/glsl"]
+	path = vim/bundle/glsl
+	url = https://github.com/Nemo157/glsl.vim.git
