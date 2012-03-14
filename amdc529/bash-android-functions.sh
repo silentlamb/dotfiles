@@ -1,8 +1,7 @@
 #!/bin/bash
 
 # Load nonpublic functions and variables
-source samsung-bash-functions.sh
-
+source ~/dotfiles/amdc529/samsung-bash-functions.sh
 
 droid-help ()
 {
