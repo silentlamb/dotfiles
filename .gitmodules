@@ -16,3 +16,6 @@
 [submodule "vim/bundle/genutils"]
 	path = vim/bundle/genutils
 	url = https://github.com/clones/vim-genutils.git
+[submodule "vim/bundle/commentary"]
+	path = vim/bundle/commentary
+	url = https://github.com/tpope/vim-commentary
