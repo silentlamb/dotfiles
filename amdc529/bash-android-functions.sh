@@ -8,7 +8,7 @@ droid-help ()
 cat << EOF
       \`\,.---.,/'
        .'     \`.           List of functions
-      /  o   o  \
+      /  o   o  \\
   __ :___________: __      See source file for usage help
  :  :|"""""""""""|:  :
  |  ||           ||  |       * - not implemented yet
