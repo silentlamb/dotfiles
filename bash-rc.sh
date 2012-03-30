@@ -11,6 +11,8 @@ HISTFILESIZE=20000
 shopt -s histappend
 shopt -s checkwinsize
 
+EDITOR=vim
+
 ### make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
