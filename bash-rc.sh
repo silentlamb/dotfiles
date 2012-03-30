@@ -44,3 +44,8 @@ for file in $(ls ~/dotfiles/${HOSTNAME}/); do
     source ~/dotfiles/${HOSTNAME}/${file}
 done
 
+## Load all files from the common directory
+for file in $(find ~/dotfiles/bash-common -name "en-*.sh" ); do
+    source $file
+done
+
