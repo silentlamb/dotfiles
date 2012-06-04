@@ -1,0 +1,126 @@
+auto_eat_chunks           =  true
+auto_exclude              =  oklob,statue,curse skull,roxanne,hyperactive,lightning spire,mimic
+auto_list                 =  false
+autoinscribe              =  (distortion|vampiric):!w
+autoinscribe              =  bad_item.*potion:!q
+autoinscribe              =  potion.*mutation:!q
+autoinscribe              =  royal jell:=g
+autopickup                =  $?!+"/%
+char_set                  =  ascii
+confirm_butcher           =  never
+default_manual_training   =  true
+drop_filter               =  skeleton, rotting, corpse
+drop_filter               =  useless_item
+dump_book_spells          =  false
+dump_order                =  header, hiscore, stats, misc, notes, inventory,
+dump_order               +=  messages, screenshot, monlist, kills_by_place, kills
+dump_order               +=  spell_usage, action_counts
+dump_order               +=  turns_by_place, skills, spells, overview, mutations,
+easy_confirm              =  all
+easy_eat_chunks           =  true
+easy_eat_contaminated     =  true
+explore_delay             =  -1
+# feature                 =  explore horizon {',,green}
+force_more_message        =  Careful!
+force_more_message        =  Found .* abyssal rune of Zot
+force_more_message        =  Found a gateway leading out of the Abyss
+force_more_message        =  You fall through a shaft
+force_more_message        =  Your scales start
+force_more_message        =  interdimensional caravan
+force_more_message        = "Die, mortal!"
+force_more_message        = Brimstone rains from above.
+force_more_message        = You sense an ancient evil watching you...
+force_more_message        = You hear words spoken in a strange and terrible language...
+force_more_message        = You feel a terrible foreboding...
+force_more_message        = A gut-wrenching scream fills the air!
+force_more_message        = You shiver with fear.
+force_more_message        = Something frightening happens.
+force_more_message        = "We do not forgive those who trespass against us!"
+force_more_message        = "You do not belong in this place!"
+force_more_message        = "You will not leave this place."
+force_more_message        = "Trespassers are not welcome here!"
+force_more_message        = "We have you now!"
+force_more_message        = You hear diabolical laughter.
+force_more_message        = You suddenly feel all small and vulnerable.
+force_more_message        = "Leave now, before it is too late!"
+force_more_message        = You sense a hostile presence.
+force_more_message        = You feel lost and a long, long way from home...
+hp_colour                 =  70:yellow, 40:red
+hp_warning                =  50
+#language                  =  polski
+lua_file                  =  lua/autofight.lua
+lua_file                  =  lua/gearset.lua
+lua_file                  =  lua/runrest.lua
+lua_file                  =  lua/stash.lua
+lua_file                  =  lua/trapwalk.lua
+lua_file                  =  lua/wield.lua
+menu_colour               =  inventory:white:\w \#\s
+menu_colour               =  inventory:white:\w \+\s
+menu_colour               =  notes:white:Reached XP level
+menu_colour               =  pickup:green:god gift
+message_colour            =  mute:(HP|Magic) restored
+message_colour            =  mute:Done searching
+message_colour            =  mute:You start (searching|resting)
+message_colour            =  mute:warning:Not with.*(in view|monsters around)
+message_colour            =  mute:warning:comes into view
+note_all_skill_levels     =  true
+note_hp_percent           =  5
+note_items                =  rod of, acquirement, preservation, running, of Zot
+note_messages             =  You fall through a shaft
+note_messages             =  Your scales start
+note_messages             =  protects you from harm
+note_monsters             =  orb of fire, ancient lich, Sigmund
+note_skill_max            =  false
+runrest_ignore_monster    =  butterfly:1
+runrest_ignore_monster    =  fish:2
+runrest_ignore_monster    =  swamp worm:3
+runrest_ignore_poison     =  2:30
+show_game_turns           =  true
+show_gold_turns           =  true
+show_player_species       =  true
+sort_menus                =  inv: true : equipped, freshness, charged
+trapwalk_safe_hp          =  dart:20,needle:15,arrow:35,bolt:45,spear:40,axe:45,blade:90
+travel_delay              =  1
+
+
+###[ Defaults ]############################################################
+include                   =  autopickup_exceptions.txt
+include                   =  food_colouring.txt
+include                   =  menu_colours.txt
+include                   =  messages.txt
+include                   =  runrest_messages.txt
+include                   =  standard_colours.txt
+include                   =  tiles_options.txt
+
+
+###[ Macros found in The Tavern ]##########################################
+: if you.god() ~= "Ashenzari" then
+    autoinscribe = curse armour:!r
+    autoinscribe = curse weapon:!r
+    autoinscribe = curse jewellery:!r
+: end
+
+
+: if you.race() == "Mummy" or you.race() == "Ghoul" or you.race() == "Vampire" then
+    autoinscribe = holy word:!r
+: end
+
+: if not (you.race() == "Mummy" or you.race() == "Ghoul") then
+    autoinscribe = scroll.*torment:!r
+: end
+
+
+{
+function trog_illiterate()
+    if you.god() == "Trog" then
+        crawl.formatted_mpr("Really attempt memorization?", "prompt")
+        local res = crawl.getch()
+        if string.lower(string.char(res)) == "y" then
+            crawl.sendkeys("M")
+        end
+    else
+        crawl.sendkeys("M")
+    end
+end
+}
+
