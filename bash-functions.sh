@@ -1,11 +1,17 @@
 #!/bin/bash
 
 ### Add git branch to prompt when inside repository
+###
+### GIT_HIDE_BRANCH=1       do not display name of branch
 function prompt_git {
     local Y="\[\033[0;33m\]"    # Brown
     local EMY="\[\033[1;33m\]"  # Yellow
     local NONE="\[\033[0m\]"    # unsets color to term's fg color
     local PREFIX=$1             # $1 is prefix, probably space char
+
+        if [ -n "${GIT_HIDE_BRANCH}" ]; then
+        return
+    fi
 
     ref=$(git symbolic-ref HEAD 2> /dev/null) || return
     
