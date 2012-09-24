@@ -24,6 +24,8 @@ alias f='find . '
 alias push="adb -d push"
 alias pull="adb -d pull"
 
+alias hide-branch="export GIT_HIDE_BRANCH=1"
+alias show-branch="unset GIT_HIDE_BRANCH"
 
 ### Parametrized
 function lapk() {           adb -d shell ls /data/app; }
