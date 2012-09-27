@@ -27,6 +27,8 @@ alias pull="adb -d pull"
 alias hide-branch="export GIT_HIDE_BRANCH=1"
 alias show-branch="unset GIT_HIDE_BRANCH"
 
+alias http-here="python -m SimpleHTTPServer"
+
 ### Parametrized
 function lapk() {           adb -d shell ls /data/app; }
 function get-last-apk() {   echo $(adb shell ls -l /data/app | cut -b39- | sort -r | head -n1 | awk '{ print $3 }');   }
