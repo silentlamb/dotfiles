@@ -1,0 +1,42 @@
+[user]
+    name = Marcin Glinski
+[color]
+    ui = auto
+[merge]
+    keepBackup = false
+    tool = p4merge
+[push]
+    default = upstream
+[diff]
+    tool = /home/mglinski/bin/git-p4diff.sh
+[core]
+    editor = vim
+[alias]
+    alias = !git-show-aliases
+    fixtypo = commit --amend
+    forgotten = !git log -n1 --pretty=tformat:%s%n%n%b | git commit -F - --amend
+    latest = log -n2 --pretty=full --stat --graph
+    lock = update-index --assume-unchanged
+    newbranch = checkout -b
+    root = rev-parse --show-toplevel
+    stage = add
+    staged = diff --staged
+    this = !git init && git add . && git commit -m \"Initial commit\"
+    trackbranch = checkout --track
+    uncommit = reset --soft HEAD^
+    unlock = update-index --no-assume-unchanged
+    unstage = reset HEAD
+    untrack = rm --cached
+    uploadbranch = push -u origin
+[mergetool "p4merge"]
+    cmd = p4merge '$BASE' '$LOCAL' '$REMOTE' '$MERGED'
+    keepTemporaries = false
+    trustExitCode = false
+    keepBackup = false
+[diff "db3"]
+    textconv = sqlite-dump
+    cachetextconv = true
+[diff "exif"]
+    textconv = exiftool
+    cachetextconv = true
+

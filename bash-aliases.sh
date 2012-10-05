@@ -8,6 +8,7 @@ if [ -x /usr/bin/dircolors ]; then
     alias dir='dir --color=auto'
     alias vdir='vdir --color=auto'
     alias grep='grep --color=auto'
+    alias rgrep='rgrep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
     alias igrep='grep -i --color=auto'
@@ -23,6 +24,10 @@ alias f='find . '
 alias push="adb -d push"
 alias pull="adb -d pull"
 
+alias hide-branch="export GIT_HIDE_BRANCH=1"
+alias show-branch="unset GIT_HIDE_BRANCH"
+
+alias http-here="python -m SimpleHTTPServer"
 
 ### Parametrized
 function lapk() {           adb -d shell ls /data/app; }
