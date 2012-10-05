@@ -20,4 +20,16 @@ call pathogen#infect("~/.vim/bundle")
 color vwilight
 
 nmap <silent> <F2> :NERDTreeToggle<CR>
+nmap <silent> <F5> :TlistToggle<CR>
+nmap <silent> <F8> :make run<CR>
+
+"" NERDTree file filters
+let NERDTreeIgnore = ['\~$', '\.pyc$', '\.[oa]$', '\.swp$', '\.bak$']
+
+
+"" Tag List
+"let Tlist_Compact_Format = 1
+let Tlist_Sort_Type = "name"
+let Tlist_Use_Right_Window = 1
+let Tlist_WinWidth = 40
 
