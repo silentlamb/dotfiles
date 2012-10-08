@@ -27,9 +27,14 @@ let Tlist_WinWidth = 42
 let Tlist_Sort_Type = "name"
 let Tlist_Compact_Format = 1
 
+set pastetoggle=<F9>
+set tags=tags;/
+
 nmap <silent> <F2> :NERDTreeToggle<CR>
 nmap <silent> <F5> :TlistToggle<CR>
-set pastetoggle=<F9>
+nmap <silent> <F8> :make run<CR>
 
-set tags=tags;/
+"" NERDTree file filters
+let NERDTreeIgnore = ['\~$', '\.pyc$', '\.[oa]$', '\.swp$', '\.bak$']
+
 
