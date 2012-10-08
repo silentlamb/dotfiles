@@ -80,11 +80,11 @@ function bash_prompt() {
     
     local ps1_env=$(prompt_virtualenv)
     local ps1_git=
-    if [ -z "$ps1_env" ]; then
-        ps1_git=$(prompt_git " ")
-    else
-        ps1_git=$(prompt_git )
-    fi
-    PS1="${ps1_env}${ps1_git}${UC}\w${NONE}:\\$ "
+    #if [ -z "$ps1_env" ]; then
+    #    ps1_git=$(prompt_git " ")
+    #else
+    ps1_git=$(prompt_git)
+    #fi
+    PS1="\n${ps1_env}${UC}\w${NONE}:\n ${ps1_git}\\$ "
 }
 
