@@ -43,3 +43,39 @@
     textconv = exiftool
     cachetextconv = true
 
+[color "status"]
+    header = black bold
+    added = magenta bold
+    changed = magenta
+    untracked = blue
+    branch = yellow bold
+    nobranch = red bold
+
+[color "branch"]
+    current = magenta bold
+    local = magenta
+    remote = blue
+    plain = blue bold
+
+[color "diff"]
+    plain = white
+    meta = black bold
+    frag = black bold
+    func = yellow bold
+    old = blue
+    new = magenta bold
+    commit = magenta bold
+    whitespace = black black 
+
+[color "grep"]
+    context = white 
+    function = yellow bold
+    linenumber = cyan bold
+    match = green bold
+    selected = green
+    filename = black bold
+
+[status]
+    relativePaths = false
+    showUntrackedFiles = normal
+
