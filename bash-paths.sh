@@ -17,10 +17,5 @@ done
 
 
 ### PATHs
-export PATH=$PATH:~/Varia/android-sdk
-export PATH=$PATH:~/Varia/android-sdk/tools
-export PATH=$PATH:~/Varia/android-sdk/platform-tools
-export PATH=$PATH:~/Varia/android-ndk
-export PATH=$PATH:~/Sources/git-achievements
 export PATH=~/bin:$PATH
 
