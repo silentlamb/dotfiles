@@ -16,20 +16,11 @@ cat << EOF
  :  :|           |:  :
   "" |           | ""
      \`-.  .-.  .-'                Author:   Marcin Glinski
-       |  | |  |                  Modified: 2012-03-14
+       |  | |  |                  Modified: 2013-01-21
        :  : :  :
        \`--' \`--'
-
-=== Game backup ==========================================================
- *droid-backup-game            create backup for given game from device
- *droid-install-game           install given game to the device
- *droid-create-config          create config for given game
-
-=== Android/adb related functions ========================================
-  droid-fetch-apk              fetch apk from the device & unpack to /tmp
-  droid-list-apk               display list of apks on the device
-
 EOF
+# Privates
     samsung-droid-help
     echo
 }
