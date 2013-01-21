@@ -20,7 +20,9 @@ alias ls="ls ${ALIAS_LS_OPTIONS}"
 alias l='ls -lF --group-directories-first'
 alias ll='ls -alF --group-directories-first'
 alias f='find . '
-
+alias s='git status'
+alias d='git diff'
+alias c='git commit'
 alias push="adb -d push"
 alias pull="adb -d pull"
 
