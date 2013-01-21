@@ -13,13 +13,14 @@
     editor = vim
 [alias]
     alias = !git-show-aliases
-	env = !env
+    env = !env
+    deleted = log --diff-filter=D --summary
     fixtypo = commit --amend
     forgotten = !git log -n1 --pretty=tformat:%s%n%n%b | git commit -F - --amend
     latest = log -n2 --pretty=full --stat --graph
     lock = update-index --assume-unchanged
     locked = !git ls-files -v | grep "^[[:lower:]]" | cut -d' ' -f2
-    newbranch = checkout -b
+    newbranch = !git-new-branch
     root = rev-parse --show-toplevel
     stage = add
     staged = diff --staged
@@ -76,6 +77,5 @@
     filename = black bold
 
 [status]
-    relativePaths = false
     showUntrackedFiles = normal
 
