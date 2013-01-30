@@ -33,6 +33,10 @@ ehthumbs.db
 Icon?
 Thumbs.db
 
+# Vim generated files
+#####################
+.netrwhist
+
 # Nonpublic files
 samsung*.sh
 
