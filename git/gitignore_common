@@ -1,0 +1,35 @@
+### Development garbage
+*.com
+*.class
+*.dll
+*.exe
+*.[ao]
+*.so
+*.py[acow]
+
+### Temp files
+*.swp
+*.bak
+*~
+
+### OS generated files
+.DS_Store*
+.ehthumbs.db
+Icon?
+Thumbs.db
+
+### Log files and dbs
+*.log
+*.LOG
+*.db3
+
+### Local configuration
+local.properties
+
+### Security
+id_[dr]sa
+id_[dr]sa.pub
+known_hosts
+.netrc
+.ssh
+
