@@ -1,16 +1,18 @@
-# Compiled source #
-###################
+### Compiled source
 *.com
 *.class
 *.dll
 *.exe
-*.o
+*.[ao]
 *.so
+*.py[acow]
 
-# Packages #
-############
-# it's better to unpack these files and commit the raw source
-# git has its own built in compression methods
+### Temp files
+*.swp
+*.bak
+*~
+
+### Packages
 *.7z
 *.dmg
 *.gz
@@ -20,23 +22,26 @@
 *.tar
 *.zip
 
-# Logs and databases #
-######################
+### Logs and databases
 *.log
-*.sql
+*.LOG
 *.sqlite
+*.db3
 
-# OS generated files #
-######################
+### OS generated files
 .DS_Store*
 ehthumbs.db
 Icon?
 Thumbs.db
-
-# Vim generated files
-#####################
 .netrwhist
 
-# Nonpublic files
+### Nonpublic files
 samsung*.sh
+
+### Security
+id_[dr]sa
+id_[dr]sa.pub
+known_hosts
+.netrc
+.ssh
 
