@@ -25,3 +25,6 @@
 [submodule "vim/bundle/a"]
 	path = vim/bundle/a
 	url = https://github.com/vim-scripts/a.vim
+[submodule "git/gitignore"]
+	path = git/gitignore
+	url = https://github.com/github/gitignore
