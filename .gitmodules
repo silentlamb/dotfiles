@@ -27,4 +27,4 @@
 	url = https://github.com/vim-scripts/a.vim
 [submodule "git/gitignore"]
 	path = git/gitignore
-	url = https://github.com/github/gitignore
+	url = https://github.com/silentlamb/gitignore
