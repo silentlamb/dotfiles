@@ -1,3 +1,4 @@
-export PATH=~/bin:$PATH
-export PATH=~/dotfiles/bin:$PATH
+PATH=~/bin:$PATH
+PATH=~/dotfiles/bin:$PATH
+PATH=~/dotfiles/external/powerline-shell:$PATH
 
