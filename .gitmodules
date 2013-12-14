@@ -1,3 +1,6 @@
 [submodule "common/vim/bundle/vim-powerline"]
 	path = common/vim/bundle/vim-powerline
 	url = https://github.com/Lokaltog/vim-powerline
+[submodule "external/powerline-shell"]
+	path = external/powerline-shell
+	url = https://github.com/milkbikis/powerline-shell
