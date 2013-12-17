@@ -1,58 +1,23 @@
 ### If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
-### Common functions
-source ~/dotfiles/common/bash/bash-functions.sh
-
-HISTCONTROL=ignoredups:ignorespace
-HISTSIZE=10000
-HISTFILESIZE=20000
-
-shopt -s histappend
-shopt -s checkwinsize
-
-EDITOR=vim
-### Other variables
-#export SAMSUNG_APPS=true
-
-### make less more friendly for non-text input files, see lesspipe(1)
-[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+# Hostname and project related settings are loaded before commons,
+# because common scripts might use some host-dependent variables 
+# Example: Path to virtualenv home
 
 
-### Enable programmable completion features 
-if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-    . /etc/bash_completion
-fi
-
-### By default colors are added
-if [ -n "${COLOR_PROMPT}" ]; then
-    COLOR_PROMPT=yes
-fi
-
-### Colored prompt
-PROMPT_COMMAND=bash_prompt
-
-
-### Add arm-* command aliasses from toolchains
-source ~/dotfiles/common/bash/bash-paths.sh
-
-### Common alias definitions.
-if [ -f ~/dotfiles/bash-aliases.sh ]; then
-    source ~/dotfiles/common/bash/bash-aliases.sh
-fi
-
-## Load files dedicated only to this host
-for file in $(ls ~/dotfiles/${HOSTNAME}/); do
-    # echo "Loading ${HOSTNAME}/${file}"
-    source ~/dotfiles/${HOSTNAME}/${file}
+# Host related settings
+source ~/dotfiles/host-dependent/$(hostname)/bash/bash-rc.sh
+# Project related settings
+for project in $(find ~/dotfiles/project-dependent -maxdepth 1 -mindepth 1 -type d 2>/dev/null); do
+	[ -e ${project}/bash/bash-rc.sh ] && source $project/bash/bash-rc.sh
 done
 
-## Load all files from the common directory
-for file in $(find ~/dotfiles/bash-common -name "en-*.sh" ); do
-    source $file
-done
-
-## Load files dedicated to various projects
-source ~/dotfiles/projects/bash_load.sh
-
+# Common settings
+# 	Note: functions.sh must be first!
+source ~/dotfiles/common/bash/functions.sh
+source ~/dotfiles/common/bash/settings.sh
+source ~/dotfiles/common/bash/paths.sh
+source ~/dotfiles/common/bash/mappings.sh
+source ~/dotfiles/common/bash/virtualenvwrapper.sh
 

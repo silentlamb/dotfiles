@@ -1,14 +1,10 @@
-# ========= #
-# Variables #
-# ========= #
+echo "Inside common/bash/virtualenvwrapper.sh"
+
 local_virtualenvpath="/usr/local/bin/virtualenvwrapper.sh"
 
-# ========= #
-# Functions #
-# ========= #
-python-setup-env () {
-
-    export WORKON_HOME=~/Data/PythonEnvs
+python-setup-env ()
+{
+    [ "${WORKON_HOME}" == "" ] && return
     export VIRTUAL_ENV_DISABLE_PROMPT="true"
 
     if [ ! -d "$WORKON_HOME" ]; then
@@ -18,16 +14,11 @@ python-setup-env () {
     source $local_virtualenvpath
 }
 
-# ========= #
-# Main code #
-# ========= #
+# Main
 if [ -f "$local_virtualenvpath" ]; then
     python-setup-env
 fi
 
-
-# ======== #
-# Clean up #
-# ======== #
+# Cleanup
 unset local_virtualenvpath
 

@@ -45,6 +45,6 @@ known_hosts
 .netrc
 .ssh
 
-/project_dependent
+/project-dependent
 /host-dependent
 
