@@ -3,7 +3,7 @@
 	url = https://github.com/Lokaltog/vim-powerline
 [submodule "external/powerline-shell"]
 	path = external/powerline-shell
-	url = https://github.com/milkbikis/powerline-shell
+	url = https://github.com/silentlamb/powerline-shell.git
 [submodule "external/powerline-tmux"]
 	path = external/powerline-tmux
 	url = https://github.com/erikw/tmux-powerline.git
