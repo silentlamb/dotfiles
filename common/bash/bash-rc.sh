@@ -2,7 +2,7 @@
 [ -z "$PS1" ] && return
 
 ### Common functions
-source ~/dotfiles/bash-functions.sh
+source ~/dotfiles/common/bash/bash-functions.sh
 
 HISTCONTROL=ignoredups:ignorespace
 HISTSIZE=10000
@@ -12,9 +12,17 @@ shopt -s histappend
 shopt -s checkwinsize
 
 EDITOR=vim
+### Other variables
+#export SAMSUNG_APPS=true
 
 ### make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
+
+### Enable programmable completion features 
+if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
+    . /etc/bash_completion
+fi
 
 ### By default colors are added
 if [ -n "${COLOR_PROMPT}" ]; then
@@ -24,20 +32,13 @@ fi
 ### Colored prompt
 PROMPT_COMMAND=bash_prompt
 
-### Enable programmable completion features 
-if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-    . /etc/bash_completion
-fi
-
-### Other variables
-export SAMSUNG_APPS=true
 
 ### Add arm-* command aliasses from toolchains
-source ~/dotfiles/bash-paths.sh
+source ~/dotfiles/common/bash/bash-paths.sh
 
 ### Common alias definitions.
 if [ -f ~/dotfiles/bash-aliases.sh ]; then
-    source ~/dotfiles/bash-aliases.sh
+    source ~/dotfiles/common/bash/bash-aliases.sh
 fi
 
 ## Load files dedicated only to this host
@@ -50,4 +51,8 @@ done
 for file in $(find ~/dotfiles/bash-common -name "en-*.sh" ); do
     source $file
 done
+
+## Load files dedicated to various projects
+source ~/dotfiles/projects/bash_load.sh
+
 

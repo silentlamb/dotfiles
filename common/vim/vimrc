@@ -1,0 +1,8 @@
+" Install pathogen
+execute pathogen#infect()
+
+" Include
+source ~/.vim/config/settings.vim
+source ~/.vim/config/mappings.vim
+
+

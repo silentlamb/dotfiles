@@ -1,0 +1,72 @@
+[user]
+	name = Marcin Glinski
+	email = m.glinski@samsung.com
+[color]
+    ui = auto
+[push]
+    default = upstream
+[core]
+    editor = vim
+[alias]
+    alias = !git-show-aliases
+    env = !env
+    deleted = log --diff-filter=D --summary
+    dlog = log --graph --pretty=full --stat
+    fixtypo = commit --amend
+    forgotten = !git log -n1 --pretty=tformat:%s%n%n%b | git commit -F - --amend
+    latest = log -n2 --pretty=full --stat --graph
+    lock = update-index --assume-unchanged
+    locked = !git ls-files -v | grep "^[[:lower:]]" | cut -d' ' -f2
+    newbranch = !git-new-branch
+    root = rev-parse --show-toplevel
+    slog = log --oneline --graph
+    stage = add
+    staged = diff --staged
+    this = !git init && git add . && git commit -m \"Initial commit\"
+    trackbranch = checkout --track
+    uncommit = reset --soft HEAD^
+    unlock = update-index --no-assume-unchanged
+    unstage = reset HEAD
+    untrack = rm --cached
+    unwip = !git reset HEAD^ && git status
+    uploadbranch = push -u origin
+    track = add
+    wip = !git add . && git commit -m 'WIP' && git log --stat -n1
+[color "status"]
+    header = black bold
+    added = magenta bold
+    changed = magenta
+    untracked = blue
+    branch = yellow bold
+    nobranch = red bold
+[color "branch"]
+    current = magenta bold
+    local = magenta
+    remote = blue
+    plain = blue bold
+[color "diff"]
+    plain = white
+    meta = black bold
+    frag = black bold
+    func = yellow bold
+    old = blue
+    new = magenta bold
+    commit = magenta bold
+    whitespace = black black 
+[color "grep"]
+    context = white 
+    function = yellow bold
+    linenumber = cyan bold
+    match = green bold
+    selected = green
+    filename = black bold
+[status]
+    showUntrackedFiles = normal
+
+[difftool "bc3"]
+	cmd = /home/mglinski/bin/git-bc3-diff.sh
+[mergetool]
+	bc3 = trustExitCode
+	bc3 = trustExitCode
+[mergetool "bc3"]
+	cmd = /usr/bin/bcompare $LOCAL $REMOTE -savetarget=$MERGED

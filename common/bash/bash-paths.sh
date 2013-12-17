@@ -19,5 +19,4 @@ done
 ### PATHs
 export PATH=~/bin:$PATH
 export PATH=~/dotfiles/bin:$PATH
-
-
+#export PATH=${ARM_EABI_PATH}:${PATH}
