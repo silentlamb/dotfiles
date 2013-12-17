@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #TODO: Remove hardcoded string
-DOTFILES_ROOT=$HOME/new-dotfiles
+DOTFILES_ROOT=$HOME/dotfiles
 
 apps_common=($(find $DOTFILES_ROOT/common/* -maxdepth 1 -name 'install.sh' -print))
 apps_host=($(find $DOTFILES_ROOT/host-dependent/$(hostname)/* -maxdepth 1 -name 'install.sh' -print))
@@ -43,5 +43,5 @@ function dotfiles_install
     for app_host in ${apps_host[@]}; do
         dotfiles_install_$(hostname)_$(basename $(dirname $app_host))
     done
-}
+}; dotfiles_install
 

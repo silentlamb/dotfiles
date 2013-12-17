@@ -1,5 +1,3 @@
-echo "Inside common/bash/virtualenvwrapper.sh"
-
 local_virtualenvpath="/usr/local/bin/virtualenvwrapper.sh"
 
 python-setup-env ()
