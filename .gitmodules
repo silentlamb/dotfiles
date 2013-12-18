@@ -23,3 +23,6 @@
 [submodule "common/vim/bundle/a.vim"]
 	path = common/vim/bundle/a.vim
 	url = https://github.com/vim-scripts/a.vim.git
+[submodule "common/vim/bundle/easymotion"]
+	path = common/vim/bundle/easymotion
+	url = https://github.com/Lokaltog/vim-easymotion.git
