@@ -7,3 +7,19 @@
 [submodule "external/powerline-tmux"]
 	path = external/powerline-tmux
 	url = https://github.com/erikw/tmux-powerline.git
+[submodule "common/vim/bundle/nerdtree"]
+	path = common/vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+
+[submodule "common/vim/bundle/snipmate.vim"]
+	path = common/vim/bundle/snipmate.vim
+	url = https://github.com/msanders/snipmate.vim
+[submodule "common/vim/bundle/taglist.vim"]
+	path = common/vim/bundle/taglist.vim
+	url = https://github.com/vim-scripts/taglist.vim.git
+[submodule "common/vim/bundle/clang_complete"]
+	path = common/vim/bundle/clang_complete
+	url = https://github.com/Rip-Rip/clang_complete.git
+[submodule "common/vim/bundle/a.vim"]
+	path = common/vim/bundle/a.vim
+	url = https://github.com/vim-scripts/a.vim.git
