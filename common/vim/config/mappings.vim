@@ -4,13 +4,16 @@
 inoremap <c-u> <esc>viwg~ea
 nnoremap H 1\|
 nnoremap L g$
-
+noremap <f2> <esc>:NERDTreeToggle<cr>
+noremap <f5> <esc>:TlistToggle<cr>
+noremap <silent> <f9> :call VimCommanderToggle()<cr>
 
 """""""""""""""""""""""""""""""""""""""
 "           Leader mappings           "
 """""""""""""""""""""""""""""""""""""""
 let mapleader = ","
 
+nnoremap <leader>a :A<cr>
 nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
 nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
 nnoremap <leader>evm :vsplit ~/.vim/config/mappings.vim<cr>
