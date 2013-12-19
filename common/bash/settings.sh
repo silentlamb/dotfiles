@@ -1,8 +1,9 @@
-EDITOR=vim
+EDITOR=/usr/bin/vim
 HISTCONTROL=ignoredups:ignorespace
 HISTSIZE=10000
 HISTFILESIZE=20000
 PROMPT_COMMAND=powerline_update_ps1
+[ "$TERM" == "xterm" ] && export TERM=xterm-256color
 
 shopt -s histappend
 shopt -s checkwinsize
