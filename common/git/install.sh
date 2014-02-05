@@ -57,5 +57,6 @@ function dotfiles_install_common_git
 	git config --global mergetool.p4merge.trustexitcode "false"
 	git config --global push.default "upstream"
 	git config --global status.showuntrackedfiles "normal"
+	git config --global color.ui "auto"
 }
 
