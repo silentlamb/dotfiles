@@ -11,5 +11,7 @@ function dotfiles_install_common_vim
 
 	ln -sf ~/dotfiles/common/vim ~/.vim
 	ln -sf ~/dotfiles/common/vim/vimrc ~/.vimrc
+	ln -sf ~/.vim ~/.nvim
+	ln -sf ~/.vimrc ~/.nvimrc
 }
 
