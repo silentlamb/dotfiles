@@ -7,7 +7,7 @@
 " Note: Used the molokai color scheme as a template
 " to build off then completely recolored almost
 " everything to be a bit more colorful while still
-" being quite readable
+" being quite readables
 "
 
 hi clear
@@ -26,12 +26,13 @@ hi Boolean guifg=#AE81FF ctermfg=141
 hi Character guifg=#E6DB74 ctermfg=186
 hi Number guifg=#AE81FF ctermfg=141
 hi String guifg=#75d142 ctermfg=113
-hi Conditional guifg=#C01414 ctermfg=1
+"hi Conditional guifg=#F03434 ctermfg=1
+hi Conditional guifg=#F03434 ctermfg=1
 hi Constant guifg=#AE81FF ctermfg=141
 hi Cursor guifg=#000000 ctermfg=0 guibg=#F8F8F0 ctermbg=15
 hi Debug guifg=#BCA3A3 ctermfg=248
 
-hi Define guifg=#C01414 ctermfg=1
+hi Define guifg=#F03434 ctermfg=1
 hi Delimiter guifg=#8F8F8F ctermfg=245
 hi DiffAdd guibg=#13354A ctermbg=236
 hi DiffChange guifg=#89807D ctermfg=244 guibg=#4C4745 ctermbg=238
@@ -80,7 +81,7 @@ hi PreCondit guifg=#A6E22E ctermfg=148
 "gui=bold
 hi PreProc guifg=#A6E22E ctermfg=148
 hi Question guifg=#66D9EF ctermfg=81
-"hi Repeat guifg=#C01414 ctermfg=1
+"hi Repeat guifg=#F03434 ctermfg=1
 hi Repeat guifg=#CF1020 ctermfg=1
 "gui=bold
 hi Search guifg=#FFFFFF ctermfg=15 guibg=#455354 ctermbg=239
@@ -99,7 +100,7 @@ if has("spell")
     hi SpellRare guisp=#FFFFFF gui=undercurl
 endif
 "hi Statement guifg=#8ac6f2 ctermfg=117 gui=bold
-hi Statement guifg=#C01414 ctermfg=1 gui=none
+hi Statement guifg=#F03434 ctermfg=1 gui=none
 "hi Statement guifg=#CF1020 ctermfg=1 gui=none
 "gui=italic
 hi clear StatusLine
@@ -129,12 +130,13 @@ hi WarningMsg guifg=#FFFFFF ctermfg=15 guibg=#333333 ctermbg=236
 "gui=bold
 hi WildMenu guifg=#66D9EF ctermfg=81 guibg=#121212 ctermbg=233
 
-hi Normal guifg=#F8F8F2 ctermfg=248 guibg=#000000 ctermbg=0
-hi Comment guifg=#5D8D8F ctermfg=66 gui=none
+hi Normal guifg=#C0C0C0 ctermfg=248 guibg=#2A3030 ctermbg=0
+"hi Comment guifg=#5D8D8F ctermfg=66 gui=none
+hi Comment guifg=#5f8787 guibg=#262626 ctermfg=66 gui=none
 "gui=italic
 hi CursorLine guibg=#121212 ctermbg=233 cterm=none
 hi CursorColumn guibg=#121212 ctermbg=233
-hi LineNr guifg=#FFFFFF ctermfg=15 guibg=#000000 ctermbg=0 gui=underline
+hi LineNr guifg=#FFFFFF ctermfg=15 guibg=#333333 ctermbg=0
 "hi NonText guifg=#BCBCBC ctermfg=250 guibg=#232526 ctermbg=235
 hi clear NonText
 hi link NonText SpecialKey
