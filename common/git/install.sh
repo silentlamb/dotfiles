@@ -12,7 +12,7 @@ function dotfiles_install_common_git
 	git config --global alias.root "rev-parse --show-toplevel"
 	git config --global alias.stage "add"
 	git config --global alias.staged "diff --staged"
-	git config --global alias.this "!git init && git add . && git commit -m "Initial commit""
+	git config --global alias.this "!git init && git add . && git commit -m 'Initial commit'"
 	git config --global alias.track "add"
 	git config --global alias.trackbranch "checkout --track"
 	git config --global alias.uncommit "reset --soft HEAD^"
