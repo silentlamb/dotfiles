@@ -7,7 +7,7 @@
 " Note: Used the molokai color scheme as a template
 " to build off then completely recolored almost
 " everything to be a bit more colorful while still
-" being quite readables
+" being quite readable
 "
 
 hi clear

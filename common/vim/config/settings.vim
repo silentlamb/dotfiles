@@ -33,3 +33,8 @@ function! s:CloseIfOnlyNerdTreeLeft()
   endif
 endfunction
 
+" GVim
+if has("gui_running")
+  set guifont=Ubuntu\ Mono\ for\ Powerline\ 12
+endif
+
