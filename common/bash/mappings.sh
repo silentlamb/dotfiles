@@ -3,7 +3,7 @@
 #
 
 ALIAS_LS_OPTIONS="--group-directories-first  -h"
-ALIAS_GREP_OPT="--color=auto -n"
+ALIAS_GREP_OPTS="--color=auto -n"
 
 # Shell
 alias f='/usr/bin/find . '
@@ -30,5 +30,9 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep ${ALIAS_GREP_OPTS}'
     alias igrep='grep -i ${ALIAS_GREP_OPTS}'
     alias irgrep='rgrep -i -r ${ALIAS_GREP_OPTS}'
+fi
+
+if [ -n ${IPYTHON_NOTEBOOK_PATH+x} ]; then
+    alias kl="pushd \${IPYTHON_NOTEBOOK_PATH}; ipython notebook ; popd"
 fi
 
