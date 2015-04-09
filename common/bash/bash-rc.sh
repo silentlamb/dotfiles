@@ -15,9 +15,13 @@ done
 
 # Common settings
 # 	Note: functions.sh must be first!
+# Core:
 source ~/dotfiles/common/bash/functions.sh
 source ~/dotfiles/common/bash/settings.sh
 source ~/dotfiles/common/bash/paths.sh
 source ~/dotfiles/common/bash/mappings.sh
+
+# Additional:
 source ~/dotfiles/common/bash/virtualenvwrapper.sh
+source ~/dotfiles/common/bash/keychain.sh
 
