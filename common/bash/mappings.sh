@@ -36,3 +36,9 @@ if [ -n ${IPYTHON_NOTEBOOK_PATH+x} ]; then
     alias kl="pushd \${IPYTHON_NOTEBOOK_PATH}; ipython notebook ; popd"
 fi
 
+
+if ! $(which vol); then
+    alias vol="amixer -q set Master"
+fi
+
+

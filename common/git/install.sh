@@ -4,7 +4,7 @@ function dotfiles_install_common_git
 	git config --global alias.deleted "log --diff-filter D --summary"
 	git config --global alias.env "!env"
 	git config --global alias.fixtypo "commit --amend"
-	git config --global alias.forgotten "!git log -n1 --pretty tformat:%s%n%n%b | git commit -F - --amend"
+	git config --global alias.forgotten "!git log -n1 --pretty=tformat:%s%n%n%b | git commit -F - --amend"
 	git config --global alias.latest "log -n2 --pretty full --stat --graph"
 	git config --global alias.lock "update-index --assume-unchanged"
 	git config --global alias.locked "!git ls-files -v | grep ^[[:lower:]] | cut -d' ' -f2"

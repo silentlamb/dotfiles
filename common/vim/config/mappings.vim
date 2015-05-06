@@ -1,9 +1,10 @@
-"""""""""""""""""""""""""""""""""""""""
 "           General mappings          "
 """""""""""""""""""""""""""""""""""""""
 inoremap <c-u> <esc>viwg~ea
 nnoremap H 1\|
+nnoremap <c-Left> 1\|
 nnoremap L g$
+nnoremap <c-Right> g$
 noremap <f2> <esc>:NERDTreeToggle<cr>
 noremap <f5> <esc>:TlistToggle<cr>
 noremap <silent> <f9> :call VimCommanderToggle()<cr>
@@ -24,4 +25,6 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 vnoremap <leader>" <esc>`<i"<esc>`>la"<esc>
 vnoremap <leader>' <esc>`<i'<esc>`>la'<esc>
 
-
+nnoremap <leader>e :e **/
+nnoremap <leader>g :exec ":vimgrep /".input("grep what? ")."/ **/*.h **/*.c **/*.cpp" \| cope<CR>
+nnoremap <leader>l :ls<CR>:b<Space>

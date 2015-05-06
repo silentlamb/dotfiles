@@ -38,3 +38,8 @@ if has("gui_running")
   set guifont=Ubuntu\ Mono\ for\ Powerline\ 12
 endif
 
+set tags+=./tags;/
+set tags+=~/.vim/ctags/android_java
+set tags+=~/.vim/ctags/android_ndk
+
+
