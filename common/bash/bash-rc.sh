@@ -7,11 +7,16 @@
 
 
 # Host related settings
-source ~/dotfiles/host-dependent/$(hostname)/bash/bash-rc.sh
-# Project related settings
-for project in $(find ~/dotfiles/project-dependent -maxdepth 1 -mindepth 1 -type d 2>/dev/null); do
-	[ -e ${project}/bash/bash-rc.sh ] && source $project/bash/bash-rc.sh
-done
+if [ -f ~/dotfiles/host-dependent/$(hostname)/bash/bash-rc.sh ]; then
+    source ~/dotfiles/host-dependent/$(hostname)/bash/bash-rc.sh
+fi
+
+if [ -d ~/dotfiles/project-dependent ]; then
+    # Project related settings
+    for project in $(find ~/dotfiles/project-dependent -maxdepth 1 -mindepth 1 -type d 2>/dev/null); do
+	    [ -e ${project}/bash/bash-rc.sh ] && source $project/bash/bash-rc.sh
+    done
+fi
 
 # Common settings
 # 	Note: functions.sh must be first!

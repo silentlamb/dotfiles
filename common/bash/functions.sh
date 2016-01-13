@@ -1,6 +1,8 @@
 function powerline_update_ps1 () 
 { 
-	export PS1="$(~/dotfiles/external/powerline-shell/powerline-shell.py $? 2> /dev/null)"
+    if [ -e "~/dotfiles/external/powerline-shell/powerline-shell.py" ]; then
+        export PS1="$(~/dotfiles/external/powerline-shell/powerline-shell.py $? 2> /dev/null)"
+    fi
 }
 
 function wtle ()
