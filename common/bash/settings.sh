@@ -2,7 +2,9 @@ EDITOR=/usr/bin/vim
 HISTCONTROL=ignoredups:ignorespace
 HISTSIZE=10000
 HISTFILESIZE=20000
-PROMPT_COMMAND=powerline_update_ps1
+if [ -e "~/dotfiles/external/powerline-shell" ]; then
+    PROMPT_COMMAND=powerline_update_ps1
+fi
 [ "$TERM" == "xterm" ] && export TERM=xterm-256color
 
 shopt -s histappend
@@ -60,11 +62,11 @@ export LESS="--RAW-CONTROL-CHARS"
 # export LESS_TERMCAP_ue=$(printf '\e[0m') # leave underline mode
 # export LESS_TERMCAP_us=$(printf '\e[04;36m') # enter underline mode – cyan 
 
-export LESS_TERMCAP_mb=$'\E[01;31m'       # begin blinking
-export LESS_TERMCAP_md=$'\E[01;38;5;74m'  # begin bold
-export LESS_TERMCAP_so=$'\E[38;5;246m'    # begin standout-mode - info box
-export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
-export LESS_TERMCAP_me=$'\E[0m'           # end mode
-export LESS_TERMCAP_se=$'\E[0m'           # end standout-mode
-export LESS_TERMCAP_ue=$'\E[0m'           # end underline
+# export LESS_TERMCAP_mb=$'\E[01;31m'       # begin blinking
+# export LESS_TERMCAP_md=$'\E[01;38;5;74m'  # begin bold
+# export LESS_TERMCAP_so=$'\E[38;5;246m'    # begin standout-mode - info box
+# export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
+# export LESS_TERMCAP_me=$'\E[0m'           # end mode
+# export LESS_TERMCAP_se=$'\E[0m'           # end standout-mode
+# export LESS_TERMCAP_ue=$'\E[0m'           # end underline
 
