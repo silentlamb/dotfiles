@@ -3,7 +3,6 @@
 """""""""""""""""""""""""""""""""""
 colorscheme skittles_dark
 filetype plugin indent on
-" let g:Powerline_symbols = 'fancy'
 " let g:vimwiki_list = [{'path': '~/Documents/VimWiki/raw', 'path_html': '~/Documents/VimWiki/html'}]
 " let g:clang_library_path = '/usr/lib/llvm-3.4/lib'
 let Tlist_Show_One_File=1
@@ -43,4 +42,6 @@ endif
 " set tags+=~/.vim/ctags/android_java
 " set tags+=~/.vim/ctags/android_ndk
 
-
+python3 from powerline.vim import setup as powerline_setup
+python3 powerline_setup()
+python3 del powerline_setup

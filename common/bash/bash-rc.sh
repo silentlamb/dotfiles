@@ -29,4 +29,5 @@ source ~/dotfiles/common/bash/mappings.sh
 # Additional:
 source ~/dotfiles/common/bash/virtualenvwrapper.sh
 source ~/dotfiles/common/bash/keychain.sh
+source ~/dotfiles/common/bash/powerline.sh
 

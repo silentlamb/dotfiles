@@ -2,9 +2,7 @@ EDITOR=/usr/bin/vim
 HISTCONTROL=ignoredups:ignorespace
 HISTSIZE=10000
 HISTFILESIZE=20000
-if [ -e "~/dotfiles/external/powerline-shell" ]; then
-    PROMPT_COMMAND=powerline_update_ps1
-fi
+
 [ "$TERM" == "xterm" ] && export TERM=xterm-256color
 
 shopt -s histappend
