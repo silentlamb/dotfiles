@@ -46,7 +46,7 @@ function dotfiles_install_common_git
 	git config --global diff.exif.cachetextconv "true"
 	git config --global diff.exif.textconv "exiftool"
 	git config --global merge.keepbackup "false"
-	git config --global merge.tool "p4merge"
+	git config --global merge.tool "meld"
 	git config --global mergetool.p4merge.cmd "p4merge '$BASE' '$LOCAL' '$REMOTE' '$MERGED'"
 	git config --global mergetool.p4merge.keepbackup "false"
 	git config --global mergetool.p4merge.keeptemporaries "false"
