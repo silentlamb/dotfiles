@@ -7,9 +7,6 @@
 [submodule "common/vim/bundle/snipmate.vim"]
 	path = common/vim/bundle/snipmate.vim
 	url = https://github.com/msanders/snipmate.vim
-[submodule "common/vim/bundle/taglist.vim"]
-	path = common/vim/bundle/taglist.vim
-	url = https://github.com/vim-scripts/taglist.vim.git
 [submodule "common/vim/bundle/clang_complete"]
 	path = common/vim/bundle/clang_complete
 	url = https://github.com/Rip-Rip/clang_complete.git
