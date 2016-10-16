@@ -1,9 +1,6 @@
 [submodule "common/vim/bundle/vim-powerline"]
 	path = common/vim/bundle/vim-powerline
 	url = https://github.com/Lokaltog/vim-powerline
-[submodule "external/powerline-tmux"]
-	path = external/powerline-tmux
-	url = https://github.com/silentlamb/tmux-powerline.git
 [submodule "common/vim/bundle/nerdtree"]
 	path = common/vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
