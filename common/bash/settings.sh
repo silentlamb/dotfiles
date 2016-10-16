@@ -19,13 +19,6 @@ fi
 ### make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
-###
-### Programming paths and variables
-###
-CPATH=${HOME}/Libs/Cpp/include
-CPLUS_INCLUDE_PATH=${PATH}
-LIBRARY_PATH=${HOME}/Libs/Cpp/lib
-
 # Less/Most
 MANPATH=/usr/local/man:/usr/local/share/man:/usr/share/man:/usr/man
 # Colors
